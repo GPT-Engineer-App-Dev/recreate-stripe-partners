@@ -1,8 +1,8 @@
 import { Container, Text, VStack, Box, Heading, SimpleGrid, Image } from "@chakra-ui/react";
 
 const partners = [
-  { name: "Partner 1", logo: "https://via.placeholder.com/150" },
-  { name: "Partner 2", logo: "https://via.placeholder.com/150" },
+  { name: "YouTube", logo: "/images/youtube-logo.png" },
+  { name: "Other Partner", logo: "/images/other-logo.png" },
   { name: "Partner 3", logo: "https://via.placeholder.com/150" },
   { name: "Partner 4", logo: "https://via.placeholder.com/150" },
   { name: "Partner 5", logo: "https://via.placeholder.com/150" },
