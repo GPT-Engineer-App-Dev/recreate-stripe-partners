@@ -1,17 +1,38 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
+import { Container, Text, VStack, Box, Heading, SimpleGrid, Image } from "@chakra-ui/react";
 
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+const partners = [
+  { name: "Partner 1", logo: "https://via.placeholder.com/150" },
+  { name: "Partner 2", logo: "https://via.placeholder.com/150" },
+  { name: "Partner 3", logo: "https://via.placeholder.com/150" },
+  { name: "Partner 4", logo: "https://via.placeholder.com/150" },
+  { name: "Partner 5", logo: "https://via.placeholder.com/150" },
+  { name: "Partner 6", logo: "https://via.placeholder.com/150" },
+];
 
 const Index = () => {
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
+    <Container centerContent maxW="container.xl" py={10}>
+      <VStack spacing={8} align="stretch" w="full">
+        <Box textAlign="center">
+          <Heading as="h1" size="2xl" mb={4}>
+            Welcome to Our Service
+          </Heading>
+          <Text fontSize="lg">We provide the best solutions for your business.</Text>
+        </Box>
+
+        <Box>
+          <Heading as="h2" size="xl" mb={4} textAlign="center">
+            Our Partners
+          </Heading>
+          <SimpleGrid columns={[2, null, 3]} spacing={10}>
+            {partners.map((partner, index) => (
+              <Box key={index} textAlign="center">
+                <Image src={partner.logo} alt={partner.name} mb={2} />
+                <Text>{partner.name}</Text>
+              </Box>
+            ))}
+          </SimpleGrid>
+        </Box>
       </VStack>
     </Container>
   );
